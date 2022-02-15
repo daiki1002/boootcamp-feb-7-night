@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Elements</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+
+            <!-- internal css -->
+                <style>
+                    p{
+                        background-color: aqua;
+                    }
+                    label{
+                        color: white;
+                    }
+                </style>
+
+
+
+
+
+</head>
+<!-- inline css -->
+<body style="background-color: red;">
+    <!-- form Elements
+            form = parent element
+            input 
+            label = to allow user recognize 
+            select
+            option
+            textarea
+            button
+
+            attributes:
+                action = to decide where info the user type is located.
+                method = how we send the info 
+                type = to decde type of anser
+                name = allow brouser to understand what the user submit 
+                id = assign uniqu name to element
+                placeholder = give the user a hint
+                value = to set option for brouser
+                required = when form control is blanle , display warning.
+                minlength fix minimam characters
+                maxlength
+    -->
+    <form action="https://kredo.jp" method="get" style="background-color: green;">
+        <label for="fullname">Full Name:</label>
+        <input type="text" name="fullname" id="fullname" placeholder="Last Name, First Name" required minlength="5" maxlength="20">
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="youremail@yahoo.com"> 
+
+        <label for="password">Passward:</label>
+        <input type="password" name="password" id="password" placeholder="your password">
+
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age" placeholder="above 18" min="18" max="60">
+
+        <label for="bday">Birth date</label>
+        <input type="date" name="birthday" id="bday">
+
+        <div>
+            <p>Choose your gender:</p>
+            <input type="radio" name="gender" value="female" id="female">
+            <label for="female">Female</label>
+
+            <input type="radio" name="gender" value="male" id="male">
+            <label for="male">Male</label>
+
+            <input type="radio" name="gender" value="lgbt" id="lgbt">
+            <label for="lgbt">LGBT</label>
+        </div>
+
+        <div>
+            <p>Choose your favorite food:</p>
+            <input type="checkbox" name="food" value="ramen" id="ramen">
+            <label for="ramen">Ramen</label>
+
+            <input type="checkbox" name="food" value="sushi" id="sushi">
+            <label for="sushi">Sushi</label>
+
+            <input type="checkbox" name="food" value="Curry" id="curry">
+            <label for="curry">Curry</label>
+        </div>
+
+        <label for="device">What is your device?</label>
+        <select name="device" id="device">
+            <option value="none"></option>
+            <option value="macbook">Macbook</option>
+            <option value="ipad">Ipad</option>
+            <option value="smartphone">Smartphone</option>
+        </select>
+        <br>
+        <!-- inline -->
+        <label for="comment">Comments</label>
+        <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Type your comments here."></textarea>
+
+        <!-- buttons -->
+        <input type="submit" name="submit" value="ok">
+
+        <input type="image" src="assets/images/gar.jpg" width="15%" height="15%" name="submit" value="send">
+        <button type="submit" name="submit" value="send">send</button>
+
+
+    </form>
+</body>
+</html>
